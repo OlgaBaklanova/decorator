@@ -37,7 +37,7 @@ def param_dec(file_name):
             logger.info('Вызываем функцию:%s' % name)
             res = func(*args, **kwargs)
             logger.info('Результат:%s' % res)
-            return func
+            return res
         return wrapper_log
     return log
 

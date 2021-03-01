@@ -16,7 +16,7 @@ def log(func):
         logger.info(f'Аргументы: {args}, {kwargs}')
         res = func(*args, **kwargs)
         logger.info('Результат:%s' % res)
-        return func
+        return res
     return wrapper_log
 
 @log
@@ -24,3 +24,5 @@ def circle(r, pi):
     return pi*(r**2)
 
 circle(15, pi=3.14)
+# result = circle(15, pi=3.14)
+# print(result)

@@ -19,7 +19,7 @@ def param_dec(file_name):
             logger.info(f'Аргументы: {args}, {kwargs}')
             res = func(*args, **kwargs)
             logger.info('Результат:%s' % res)
-            return func
+            return res
         return wrapper_log
     return log
 
@@ -28,3 +28,4 @@ def circle(r, pi):
     return pi*(r**2)
 
 circle(5.5, pi=3.14)
+
